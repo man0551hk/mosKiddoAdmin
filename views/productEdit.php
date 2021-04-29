@@ -4,7 +4,7 @@ if (!empty($_POST)) {
   if (isset($_POST["action"]) && $_POST["action"] == "saveProduct") {
     $returnMsg = $this->productController->SaveProduct();
     if (isset($returnMsg["id"])) {
-      // Url::redirect("productEdit/" . $returnMsg["id"] . "/");
+      Url::redirect("productEdit/" . $returnMsg["id"] . "/");
     }
   }
 }

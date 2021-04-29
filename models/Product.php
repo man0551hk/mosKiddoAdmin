@@ -11,8 +11,8 @@ class Product
       new Field("description", true),
       new Field("totalQuantity", true),
       new Field("maxQtyPerOrder", true),
-      new Field("size", true),
-      new Field("color", true),
+      new Field("option1", true),
+      new Field("option2", true),
       new Field("price", true),
     ];
   }

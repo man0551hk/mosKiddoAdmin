@@ -105,7 +105,7 @@ class ProductController
           "data" => json_encode($product["data"], JSON_UNESCAPED_UNICODE),
           "categoryId" =>  $product["data"]["categoryid"]
         );
-        $this->dbController->QueryDB("product", $fields, "update",  $condition, "", "", "", true);
+        $this->dbController->QueryDB("product", $fields, "update",  $condition, "", "", "", false);
       }
       return array("id" => $productId);
     }

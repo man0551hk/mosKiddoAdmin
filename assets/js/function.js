@@ -320,7 +320,6 @@ function checkCategory() {
 function checkProduct(isInsert) {
   var err = 0;
   try {
-
     err += GenericCheckInput("productName", "text", "Please enter product name");
     err += GenericCheckInput("categoryId", "select", "Please select category");
     err += GenericCheckInput("totalQuantity", "integer", "Please enter total quantity");
