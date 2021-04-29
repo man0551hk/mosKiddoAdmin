@@ -16,26 +16,6 @@
 
   <div class="row">
     <div class="panel-heading">
-      <h4>New Blogs</h4>
-    </div>
-    <div class="panel-body">
-      <table class="table table-bordered table-striped table-condensed mb-none" id="blogList">
-        <thead>
-          <tr>
-            <th>Created Date</th>
-            <th>Name</th>
-            <th>Message</th>
-            <th>Status</th>
-            <th>Edit</th>
-          </tr>
-        </thead>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="panel-heading">
       <h4>New Orders</h4>
     </div>
     <div class="panel-body">

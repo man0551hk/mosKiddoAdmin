@@ -12,14 +12,6 @@
 				<ul class="nav nav-main">
 					<?php
 					UI::CreateMenu("", "Dashboard", "", [], 'fa-home');
-					UI::CreateMenu("blog/", "Blog", "", [], 'fa-vine');
-
-					$albums = [
-						array("albumCategory/", "Category", "", [], ' fa-camera'),
-						array("albumList/", "Album List", "", [], ' fa-camera-retro'),
-					];
-					UI::CreateMenu("album/", "Album", "", $albums, 'fa-file-image-o');
-
 					$products = [
 						array("product/", "Product", "", [], 'fa-space-shuttle'),
 						array("category/", "Category", "", [], ' fa-behance-square'),

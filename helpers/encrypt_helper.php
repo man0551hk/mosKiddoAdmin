@@ -9,7 +9,7 @@ class Encrypt
 {
   public static function encryptIt($q)
   {
-    $cryptKey  = 'shcc@2021';
+    $cryptKey  = 'mosKiddo@2021';
     $ivlen = openssl_cipher_iv_length($cipher = "AES-128-CBC");
     $iv = openssl_random_pseudo_bytes($ivlen);
     $ciphertext_raw = openssl_encrypt($q, $cipher, $cryptKey, $options = OPENSSL_RAW_DATA, $iv);
@@ -20,7 +20,7 @@ class Encrypt
 
   public static function decryptIt($q)
   {
-    $cryptKey  = 'shcc@2021';
+    $cryptKey  = 'mosKiddo@2021';
     $c = base64_decode($q);
     $ivlen = openssl_cipher_iv_length($cipher = "AES-128-CBC");
     $iv = substr($c, 0, $ivlen);

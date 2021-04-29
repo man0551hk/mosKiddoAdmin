@@ -12,7 +12,7 @@ if (!empty($_POST)) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-  <title>SHCC Admin Portal</title>
+  <title>Mos Kiddo Admin Portal</title>
 
   <link rel="stylesheet" href="<?= Url::assetFolderPath() ?>vendor/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="<?= Url::assetFolderPath() ?>vendor/font-awesome/css/font-awesome.css" />
@@ -31,7 +31,7 @@ if (!empty($_POST)) {
   <section class="body-sign">
     <div class="center-sign">
       <a href="/" class="logo pull-left">
-        <img src="<?= Url::getDomain() ?>assets/images/shccLogo.png" />
+        Mos Kiddo
       </a>
 
       <div class="panel panel-sign">

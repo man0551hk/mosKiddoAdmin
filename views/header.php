@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>SHCC Admin Portal</title>
+  <title>Mos Kiddo Admin Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
 
@@ -49,7 +49,7 @@
     <header class="header">
       <div class="logo-container">
         <a href="#" class="logo">
-          <img src="<?= Url::getDomain() ?>assets/images/shccLogo.png" height="40px" />
+          MNos Kiddo
         </a>
         <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
           <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
