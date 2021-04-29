@@ -319,15 +319,20 @@ function checkCategory() {
 
 function checkProduct(isInsert) {
   var err = 0;
-  err += GenericCheckInput("productName", "text", "Please enter product name");
-  err += GenericCheckInput("categoryId", "select", "Please select category");
-  err += GenericCheckInput("totalQuantity", "integer", "Please enter total quantity");
-  err += GenericCheckInput("maxQtyPerOrder", "text", "Please enter max quantity per order");
-  err += GenericCheckInput("price", "integer", "Please enter price");
-  if ($isInsert == 1) {
-    err += GenericCheckInput("images", "file", "Please select at least 1 photo");
-  }
+  try {
 
+    err += GenericCheckInput("productName", "text", "Please enter product name");
+    err += GenericCheckInput("categoryId", "select", "Please select category");
+    err += GenericCheckInput("totalQuantity", "integer", "Please enter total quantity");
+    err += GenericCheckInput("maxQtyPerOrder", "text", "Please enter max quantity per order");
+    err += GenericCheckInput("price", "integer", "Please enter price");
+    if (isInsert == 1) {
+      err += GenericCheckInput("images", "file", "Please select at least 1 photo");
+    }
+  } catch (err) {
+    console.log(err);
+    err = 1;
+  }
 
   if (err == 0) {
     return true;

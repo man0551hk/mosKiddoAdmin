@@ -75,8 +75,8 @@ class ProductController
 
         $product["data"]["imageList"] = $this->commonController->SaveFile($_FILES["images"], 0, "imagesGallery/productImages");
       }
-      $product["data"]["size"] = explode(",",  $product["data"]["size"]);
-      $product["data"]["color"] = explode(",",  $product["data"]["color"]);
+      $product["data"]["option1"] = explode(",",  $product["data"]["option1"]);
+      $product["data"]["option2"] = explode(",",  $product["data"]["option2"]);
 
       if ($productId == 0) {
         $product["data"]["createDate"] = date("Y-m-d");
@@ -105,7 +105,7 @@ class ProductController
           "data" => json_encode($product["data"], JSON_UNESCAPED_UNICODE),
           "categoryId" =>  $product["data"]["categoryid"]
         );
-        $this->dbController->QueryDB("product", $fields, "update",  $condition);
+        $this->dbController->QueryDB("product", $fields, "update",  $condition, "", "", "", true);
       }
       return array("id" => $productId);
     }
@@ -121,11 +121,11 @@ class ProductController
       $breaks = array("<br />", "<br>", "<br/>");
       $data->description = str_ireplace($breaks, "\r\n", $data->description);
     }
-    if (isset($data->size)) {
-      $data->size = implode(",",   $data->size);
+    if (isset($data->option1)) {
+      $data->option1 = implode(",", $data->option1);
     }
-    if (isset($data->color)) {
-      $data->color = implode(",",   $data->color);
+    if (isset($data->option2)) {
+      $data->option2 = implode(",",   $data->option2);
     }
     return $data;
   }

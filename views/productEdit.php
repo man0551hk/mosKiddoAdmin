@@ -4,7 +4,7 @@ if (!empty($_POST)) {
   if (isset($_POST["action"]) && $_POST["action"] == "saveProduct") {
     $returnMsg = $this->productController->SaveProduct();
     if (isset($returnMsg["id"])) {
-      Url::redirect("productEdit/" . $returnMsg["id"] . "/");
+      // Url::redirect("productEdit/" . $returnMsg["id"] . "/");
     }
   }
 }
@@ -28,7 +28,7 @@ $product = $this->productController->GetProduct($productId);
 
   <div class="row">
     <div class="panel-body">
-      <form method="POST" onsubmit="return checkProduct(<?= $productId == 0 ? 0 : 1 ?>)" enctype="multipart/form-data">
+      <form method="POST" onsubmit="return checkProduct(<?= $productId == 0 ? 1 : 0 ?>)" enctype="multipart/form-data">
         <?php
         if ($productId != 0) {
           UI::CreateHidden("productId", $productId);
@@ -41,8 +41,8 @@ $product = $this->productController->GetProduct($productId);
         UI::CreateElement("description", "", "Description", "textarea", null, UI::ReturnEmpty($product, "description"), false, false, "top", "", false, "col-md-12", true);
         UI::CreateElement("totalQuantity", "", "Total Quantity", "text", null, UI::ReturnEmpty($product, "totalQuantity"), false, false, "top", "isNumber", false, "col-md-12", true);
         UI::CreateElement("maxQtyPerOrder", "", "Max Quantity Per Order", "text", null, UI::ReturnEmpty($product, "maxQtyPerOrder"), false, false, "top", "isNumber", false, "col-md-12", true);
-        UI::CreateElement("size", "", "Size (use comma , to separate options)", "text", null, UI::ReturnEmpty($product, "size"), false, false, "top", "", false, "col-md-12", true);
-        UI::CreateElement("color", "", "Color (use comma , to separate options)", "text", null, UI::ReturnEmpty($product, "color"), false, false, "top", "", false, "col-md-12", true);
+        UI::CreateElement("option1", "", "Option set 1 (use comma , to separate options)", "text", null, UI::ReturnEmpty($product, "option1"), false, false, "top", "", false, "col-md-12", true);
+        UI::CreateElement("option2", "", "Option set 2 (use comma , to separate options)", "text", null, UI::ReturnEmpty($product, "option2"), false, false, "top", "", false, "col-md-12", true);
         UI::CreateElement("price", "", "Price", "text", null, UI::ReturnEmpty($product, "price"), false, false, "top", "isNumber", false, "col-md-12", true);
 
         if (isset($product->imageList)) {
