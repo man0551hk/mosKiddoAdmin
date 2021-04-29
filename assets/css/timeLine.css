@@ -1,0 +1,42 @@
+.tooltip-inner {
+    color: #fff;
+    background-color: #190707 !important;
+    width: 200px;
+    text-align: left;
+    /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #F2F2F2
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #F2F2F2
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #F2F2F2
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: #F2F2F2
+}
+
+.form-group {
+    margin-bottom: 0px !important;
+}
+
+.waiting {
+    border: 4px solid hsl(0, 0%, 97%) !important;
+    background: hsl(0, 0%, 97%) !important;
+}
+
+.accepted {
+    border: 4px solid green!important;
+    background: green !important;
+}
+
+.rejected {
+    border: 4px solid red!important;
+    background: red !important;
+}

@@ -1,0 +1,88 @@
+/* ---- Timeline ---- */
+
+.priceline ol {
+	position: relative;
+	display: block;
+	height: 4px;
+	background: hsl(0, 0%, 97%);
+	min-width:90%;
+	padding: 0px;
+}
+.priceline  ol::before,
+.priceline ol::after {
+	position: absolute;
+	top: -8px;
+	display: block;
+	width: 0;
+	height: 0;
+  border-radius: 10px;
+	border: 10px solid hsl(0, 0%, 97%);
+}
+.priceline ol::before {
+	left: -5px;
+}
+.priceline ol::after {
+	right: -10px;
+	border-right: 0;
+	border-left: 20px solid hsl(0, 0%, 97%);
+}
+
+
+/* ---- Timeline elements ---- */
+.priceline li {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 8%;
+	font: bold 14px arial;
+  height: 90px;
+}
+.priceline li .diplome {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 88%;
+  text-align: center;
+  color: #000000;
+}
+.priceline li .point {
+	content: "";
+	top: -8px;
+	left: 43%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 4px solid yellow;
+	border-radius: 10px;
+	background: yellow;
+  position: absolute;
+}
+.priceline li .description {
+  display: none;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  font-weight: normal;
+  z-index: 1;
+}
+.priceline .description::before {
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #f4f4f4;
+  position: absolute;
+  top: -5px;
+  left: 43%;
+}
+
+/* ---- Hover effects ---- */
+.priceline li:hover {
+	cursor: pointer;
+  color: #48A4D2;
+}
+.priceline li:hover .description {
+  display: block;
+}
