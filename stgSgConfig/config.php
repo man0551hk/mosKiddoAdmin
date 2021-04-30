@@ -1,11 +1,11 @@
 <?php
 date_default_timezone_set("Asia/Hong_Kong");
-$domain = 'http://local.admin.mos-kiddo.com/';
+$domain = 'https://mastermind.mos-kiddo.com/';
 $cookieDomain = 'local.admin.shcc.com';
-$imageDomain = 'http://local.mos-kiddo.com/';
-$env = 'local';
+$imageDomain = 'https://images.mos-kiddo.com/';
+$env = 'win';
 $hostName = "localhost";
 $port = "3306";
 $dbName = "sq_moskiddo";
-$userName = "root";
-$password = Encrypt::decryptIt("yJLXtWsP7dDmXK9bFOz8kQm3dMtC32BRaQqB3WgaCs5FdfKvV23eRlsj9oYqjphDM8qRysz3K9kKW1IemCLpMg==");
+$userName = "sq_moskiddo";
+$password = Encrypt::decryptIt("QYWANtsc/1QjZAex5UmOuGv9227p4g+hAs2N6bicMB2pd26V9LjTR2z8cZGdMJ7lfFfwsxS5DpWYzsSUmsY/ig==");
