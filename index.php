@@ -11,7 +11,7 @@ include_once 'helpers/url_helper.php';
 include_once 'helpers/ui_helper.php';
 include_once 'helpers/permission_helper.php';
 include_once 'controllers/PageController.php';
-
+echo Encrypt::encryptIt("tGc0*f17");
 $pageName = "index";
 if (isset($_GET["pageName"])) {
 	$pageName = $_GET["pageName"];
