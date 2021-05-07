@@ -73,10 +73,20 @@ class ProductController
       $product["data"]["description"] = $this->commonController->ReplaceEmpty($product["data"]["description"]);
       if (isset($_FILES["images"]) && $_FILES["images"]["error"][0] == 0) {
 
-        $product["data"]["imageList"] = $this->commonController->SaveFile($_FILES["images"], 0, "imagesGallery/productImages");
+        $product["data"]["imageList"] = $this->commonController->SaveFile($_FILES["images"], $productId, "imagesGallery/productImages");
       }
-      $product["data"]["option1"] = explode(",",  $product["data"]["option1"]);
-      $product["data"]["option2"] = explode(",",  $product["data"]["option2"]);
+      UI::DebugArray($product["data"]);
+      if (isset($product["data"]["option1"])) {
+        $product["data"]["option1"] = explode(",",  $product["data"]["option1"]);
+      } else {
+        $product["data"]["option1"] = null;
+      }
+
+      if (isset($product["data"]["option2"])) {
+        $product["data"]["option2"] = explode(",",  $product["data"]["option2"]);
+      } else {
+        $product["data"]["option2"] = null;
+      }
 
       if ($productId == 0) {
         $product["data"]["createDate"] = date("Y-m-d");

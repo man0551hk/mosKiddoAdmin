@@ -2,7 +2,7 @@
 date_default_timezone_set("Asia/Hong_Kong");
 $domain = 'https://mastermind.mos-kiddo.com/';
 $cookieDomain = 'local.admin.shcc.com';
-$imageDomain = 'https://images.mos-kiddo.com/';
+$imageDomain = 'https://mastermind.mos-kiddo.com/imagesGallery/';
 $env = 'win';
 $hostName = "localhost";
 $port = "3306";
